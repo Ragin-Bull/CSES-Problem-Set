@@ -1,6 +1,5 @@
 /*
-Approach: We need to find the number of connected components 
-and then for each connected component id we store the first visited node and then we print them for all component ids
+Approach: Apply BFS and save the path from start node to the end node
 */
 
 #include<bits/stdc++.h>
