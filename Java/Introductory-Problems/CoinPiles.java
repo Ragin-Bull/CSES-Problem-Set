@@ -2,8 +2,11 @@ import java.util.*;
 import java.io.*;
 import java.lang.*;
 
-public class TwoKnights{
+public class CoinPiles{
     static class FastScanner {
+        /*
+            Faster input and output reader and printer methods
+        */
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer("");
 
@@ -33,15 +36,28 @@ public class TwoKnights{
         }
     }
 
+    public static long binaryExponentiation(long a, long b, long mod){
+        /*
+        * Method for calculating a^b modulo mod
+        */
+
+        long ans = 1L;
+        while(b>0){
+            if(b%2 == 1){
+                ans = (ans * a)%mod;
+                if (ans < 0)
+                    ans+=mod;
+            }
+            a = (a*a)%mod;
+            b=b/2;
+        }
+        return ans;
+    }
+
     public static void main(String[] args){
         FastScanner fs = new FastScanner();
         PrintWriter out = new PrintWriter(System.out);
 
-        long n = fs.nextLong();
-        for(long i=1; i<=n; i++){
-            long value = (i*i*(i+3)*(i-3))/2 + 4*(3*i-2);
-            out.println(value);
-        }
         out.close();
     }
 }
