@@ -21,6 +21,8 @@ using namespace __gnu_pbds;
 #define pi 3.141592653589793238462
 #define cntSetBits __builtin_popcountll
 #define szz(x) ((int)(x).size())
+#define repf(a, b) for(int i=a; i<b; i++)
+#define repb(a, b) for(int i=a; i>b; i--)
 #define all(x) (x).begin(), (x).end()
 #define int long long
 #define double long double
