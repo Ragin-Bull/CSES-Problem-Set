@@ -58,6 +58,24 @@ public class CoinPiles{
         FastScanner fs = new FastScanner();
         PrintWriter out = new PrintWriter(System.out);
 
+        long t = fs.nextLong();
+        while(t-- > 0){
+            long a = fs.nextLong();
+            long b = fs.nextLong();
+
+            if(a==0 && b==0){
+                out.println("YES");
+            }
+            else if(a==0 || b==0){
+                out.println("NO");
+            }
+            else{
+                if(2*a-b >=0 && 2*b-a >=0 && (2*a-b)%3==0 && (2*b-a)%3 == 0)
+                    out.println("YES");
+                else
+                    out.println("NO");
+            }
+        }
         out.close();
     }
 }
