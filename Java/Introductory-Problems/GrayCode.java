@@ -82,6 +82,8 @@ public class GrayCode{
             blankList.add(valueZero);
         }
 
+        Collections.reverse(listZero);
+
         for(int i=0; i<listZero.size(); i++){
             // Use the constructor if you want to avoid value being pointed to the same location
             StringBuilder valueOne = new StringBuilder(listZero.get(i).toString());
